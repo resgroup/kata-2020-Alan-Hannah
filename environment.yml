@@ -1,0 +1,4 @@
+name: kata-2019
+dependencies:
+  - pytest
+  - python=3.6.*

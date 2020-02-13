@@ -1,0 +1,19 @@
+environment:
+    MINICONDA: C:\Miniconda3
+    matrix:
+      - PYTHON_VERSION: "3.6"
+        PYTHON_ARCH: "64"
+  
+  install:
+    - set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
+    - set PYTHONPATH=C:\projects\kata-2019-Alan-Hannah
+    - cmd: which python
+    - cmd: python --version
+    - cmd: conda config --set always_yes yes --set changeps1 no
+    - cmd: conda env create -f environment.yml
+    - cmd: activate kata-2019
+  
+  build: false
+  
+  test_script:
+    - cmd: pytest tests

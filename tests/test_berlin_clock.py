@@ -1,6 +1,6 @@
 import pytest
 from src.berlin_clock import tell_the_time_berlin
-from src.berlin_clock import get_row_1
+from src.berlin_clock import get_row_1, get_row_2, get_row_3, get_row_4, get_row_5, create_row_string
 
 
 def test_tell_the_time_berlin():

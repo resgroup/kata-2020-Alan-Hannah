@@ -42,3 +42,10 @@ def test_get_row_5():
     actual_output = get_row_5(53)
     expected_output = "YYYO"
     assert actual_output == expected_output
+
+
+def test_create_row_string():
+
+    actual_output = create_row_string(8,4,"Y")
+    expected_output = "YYYYOOOO"
+    assert actual_output == expected_output    

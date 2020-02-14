@@ -20,7 +20,7 @@ def tell_the_time_berlin(time_string):
 
 
 def get_row_1(seconds):
-    no_of_lights = int(int(seconds) % 2 == 0)
+    no_of_lights = int(seconds) % 2 == 0
     return create_row_string(1, no_of_lights, 'Y')
 
 def get_row_2(hours):
@@ -41,7 +41,8 @@ def get_row_5(minutes):
 
 def create_row_string(length, number_to_fill, filler_character):
     row_list = ["O"] * length
-    row_list[:number_to_fill] = [filler_character] * number_to_fill
+    if number_to_fill > 0:
+        row_list[:number_to_fill] = [filler_character] * number_to_fill
     return "".join(row_list)
     
     

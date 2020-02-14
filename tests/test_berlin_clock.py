@@ -5,9 +5,9 @@ from src.berlin_clock import get_row_1, get_row_2, get_row_3, get_row_4, get_row
 
 def test_tell_the_time_berlin():
 
-    actual_output = tell_the_time_berlin("12:56:01")
+    actual_output = tell_the_time_berlin("12:56:02")
 
-    expected_output = "O\nRROO\nRROO\nYYYYYYYYYYY\nYOOO"
+    expected_output = "Y\nRROO\nRROO\nYYYYYYYYYYY\nYOOO"
 
     assert actual_output == expected_output
 
@@ -45,7 +45,6 @@ def test_get_row_5():
 
 
 def test_create_row_string():
-
     actual_output = create_row_string(8,4,"Y")
     expected_output = "YYYYOOOO"
     assert actual_output == expected_output    

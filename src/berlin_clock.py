@@ -47,3 +47,36 @@ def create_row_string(length, number_to_fill, filler_character):
     
     
     
+class BerlinClock:
+    self __init__(self, time_string):
+        time_list = time_string.split(":")
+        self.hour = Hour(time_list[0])
+        self.minutes = Minutes(time_list[1])
+        self.seconds = Seconds(time_list[2])
+        
+class TimeComponent:
+    def __init__(self, count):
+        self.count = count
+    
+    @classmethod    
+    def get_list_of_row_strings(self):
+        pass
+    
+    @classmethod
+    def create_row_string(self, length, number_to_fill, filler_character):
+        row_list = ["O"] * length
+        if number_to_fill > 0:
+            row_list[:number_to_fill] = [filler_character] * number_to_fill
+        return "".join(row_list)
+                
+class Hour(TimeComponent):
+    def __init__(self, count):
+        super().__init__(self, count)
+    
+class Minutes(TimeComponent):
+    def __init__(self, count):
+        super().__init__(self, count)
+
+class Seconds(TimeComponent):
+    def __init__(self, count):
+        super().__init__(self, count)

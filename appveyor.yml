@@ -6,12 +6,12 @@ environment:
 
 install:
   - set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
-  - set PYTHONPATH=C:\projects\kata-2019-Alan-Hannah
+  - set PYTHONPATH=C:\projects\kata-2020-Alan-Hannah
   - cmd: which python
   - cmd: python --version
   - cmd: conda config --set always_yes yes --set changeps1 no
   - cmd: conda env create -f environment.yml
-  - cmd: activate kata-2019
+  - cmd: activate kata-2020
 
 build: false
 
